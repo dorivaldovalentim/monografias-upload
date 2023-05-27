@@ -29,9 +29,14 @@ function getDatabase($data = null)
 
 function asset($file = '')
 {
-    if (file_exists('/public/' . $file)) {
+    if (file_exists(getConfig('APP_LOCATION') . '/public/' . $file)) {
         return getConfig('APP_DOMAIN') . '/public/' . $file;
     } else {
         return 'Não encontrado: ' . getConfig('APP_DOMAIN') . '/public/' . $file;
     }
+}
+
+function auth()
+{
+    return isset($_SESSION['user']) ? $_SESSION['user'] : 0;
 }
