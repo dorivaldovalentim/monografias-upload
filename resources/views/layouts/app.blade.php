@@ -62,11 +62,14 @@
             </div>
         </div>
     </nav>
-	
+
     @yield('content')
+    @include('modals')
+
 
     {{-- script js start --}}
 
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
 
     {{-- script js end --}}
