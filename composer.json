@@ -19,7 +19,8 @@
             "App\\": "App/"
         },
         "files": [
-            "config/init.php"
+            "config/init.php",
+            "config/session.php"
         ]
     },
     "require": {

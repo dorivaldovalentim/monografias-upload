@@ -40,7 +40,7 @@
 				<h1 class="modal-title fs-5" id="registerModalLabel">Criar conta</h1>
 			</div>
 
-			<form class="modal-body">
+			<form action="{{ $router->route('register') }}" method="post" class="modal-body">
 				<div class="mb-3">
 					<label class="col-12">
 						<span>Nome</span>
