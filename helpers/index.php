@@ -1,5 +1,6 @@
 <?php
-	
+	include_once 'sql.php';
+
 	function asset($path) {
 		$file = 'assets/' . $path;
 

@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	include_once('helpers.php');
+	include_once 'helpers/index.php';
 	include_once 'includes/menu.inc.php';
 ?>
 
