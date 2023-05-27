@@ -1,0 +1,31 @@
+{
+    "name": "php-mvc/digital-file",
+    "description": "Site de hospedagem de ficheiros no aws da Amazon",
+    "type": "project",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Dorivaldo Valentim",
+            "email": "dorivaldovalentim@gmail.com",
+            "role": "developer"
+        }
+    ],
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        },
+        "files": [
+            "config/init.php"
+        ]
+    },
+    "require": {
+        "illuminate/database": "^8.40",
+        "coffeecode/router": "^1.0",
+        "vlucas/phpdotenv": "^5.3",
+        "jenssegers/blade": "^1.4"
+    }
+}
