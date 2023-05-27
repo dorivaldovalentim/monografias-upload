@@ -14,7 +14,7 @@ class LoginController extends Controller
         if ($user) {
             if (password_verify($data['password'], $user->password)) {
                 $_SESSION['user'] = $user->id;
-                $this->router->redirect("home");
+                $this->router->redirect("/");
             }
         } else {
             $this->router->redirect("login");
@@ -24,6 +24,6 @@ class LoginController extends Controller
     public function logout()
     {
         unset($_SESSION['user']);
-        $this->router->redirect('login');
+        $this->router->redirect('/');
     }
 }

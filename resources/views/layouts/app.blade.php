@@ -43,21 +43,23 @@
                         <a href="#" class="nav-link">Cursos</a>
                     </li>
 
-                    <?php if (auth()): ?>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Sair</a>
-                    </li>
-                    <?php else: ?>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar
-                            Sessão</a>
-                    </li>
+                    @if (auth())
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">Criar
+                                conta</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#registerModal">Criar
-                            conta</a>
-                    </li>
-                    <?php endif;?>
+                        <li class="nav-item">
+                            <a href="{{ $router->route('logout') }}" class="nav-link">Sair</a>
+                        </li>
+                    @else:
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal"
+                                data-bs-target="#loginModal">Iniciar
+                                Sessão</a>
+                        </li>
+                    @endif
                 </ul>
             </div>
         </div>
