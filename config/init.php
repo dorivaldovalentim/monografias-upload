@@ -40,3 +40,14 @@ function auth()
 {
     return isset($_SESSION['user']) ? $_SESSION['user'] : 0;
 }
+
+function user()
+{
+    return App\Models\User::findOrFail(auth());
+}
+
+
+function isAdmin()
+{
+    return user()->is_admin == 1;
+}
