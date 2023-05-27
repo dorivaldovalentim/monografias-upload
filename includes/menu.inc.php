@@ -2,7 +2,7 @@
 <html lang="pt-AO">
 
 	<head>
-		<title>File Upload » <?= $title ?? 'Início' ?></title>
+		<title>File Upload » <?=$title ?? 'Início'?></title>
 
 		<!-- Meta Tags -->
 		<meta charset="UTF-8">
@@ -12,14 +12,14 @@
 		<meta name="description" content="DorivaTech" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link rel="stylesheet" href="<?= asset('css/bootstrap.min.css') ?>" />
-		<link rel="stylesheet" href="<?= asset('css/bootstrap-icons.min.css') ?>" />
+		<link rel="stylesheet" href="<?=asset('css/bootstrap.min.css')?>" />
+		<link rel="stylesheet" href="<?=asset('css/bootstrap-icons.min.css')?>" />
 	</head>
 
 	<body>
 		<nav class="navbar navbar-expand-lg bg-light">
 			<div class="container">
-				<a class="navbar-brand" href="#">PDF Upload</a>
+				<a class="navbar-brand" href="#">Monografia</a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -29,11 +29,15 @@
 
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-						<?php if(auth()): ?>
-							<li class="nav-item">
-								<a href="#" class="nav-link">Ver PDFs</a>
-							</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Departamentos</a>
+						</li>
 
+						<li class="nav-item">
+							<a href="#" class="nav-link">Cursos</a>
+						</li>
+
+						<?php if (auth()): ?>
 							<li class="nav-item">
 								<a href="#" class="nav-link">Sair</a>
 							</li>
@@ -41,11 +45,11 @@
 							<li class="nav-item">
 								<a href="#" class="nav-link"  data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar Sessão</a>
 							</li>
-							
+
 							<li class="nav-item">
 								<a href="#" class="nav-link"  data-bs-toggle="modal" data-bs-target="#registerModal">Criar conta</a>
 							</li>
-						<?php endif; ?>
+						<?php endif;?>
 					</ul>
 				</div>
 			</div>
