@@ -1,6 +1,6 @@
 <!-- Login Modal -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-	<form action="{{ $router->route('register') }}" method="post" class="modal-dialog modal-dialog-centered">
+	<form action="{{ $router->route('login') }}" method="post" class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header justify-content-center">
 				<h1 class="modal-title fs-5" id="loginModalLabel">Iniciar Sessão</h1>
@@ -10,21 +10,21 @@
 				<div class="mb-3">
 					<label class="col-12">
 						<span>E-mail</span>
-						<input type="text" class="form-control" />
+						<input type="text" name="username" class="form-control" />
 					</label>
 				</div>
 
 				<div>
 					<label class="col-12">
 						<span>Senha</span>
-						<input type="password" class="form-control" />
+						<input type="password" name="password" class="form-control" />
 					</label>
 				</div>
 			</div>
 
 			<div class="modal-footer justify-content-center">
 				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-				<button type="button" class="btn btn-primary">Salvar</button>
+				<button type="submit" class="btn btn-primary">Salvar</button>
 			</div>
 		</div>
 	</form>

@@ -17,7 +17,9 @@ $router->get("/home", "WebController:home", 'home');
 /** Auth */
 $router->group(null);
 $router->namespace("App\Controllers\Auth");
+$router->post("/login", "LoginController:login", 'login');
 $router->post("/register", "RegisterController:register", 'register');
+$router->get("/logout", "LoginController:logout", 'logout');
 
 /** Definindo as rotas de erro */
 $router->group("error");
