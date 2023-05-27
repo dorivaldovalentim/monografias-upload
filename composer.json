@@ -27,6 +27,8 @@
         "illuminate/database": "^8.40",
         "coffeecode/router": "^1.0",
         "vlucas/phpdotenv": "^5.3",
+        "filp/whoops": "^2.12",
+        "symfony/var-dumper": "^5.2",
         "jenssegers/blade": "^1.4"
     }
 }
